@@ -80,7 +80,7 @@ class Tiler(toga.App):
         crop_width, crop_height = self.paper_width, self.paper_height
         print(crop_width, crop_height)
         img = center_crop(img, crop_width, crop_height)
-        img.save("/home/johnzhou/test112233.png")
+        img.save("/Users/John_1/test112233.png")
 
     @contextmanager
     def sans_redraw(self):
@@ -148,4 +148,4 @@ class Tiler(toga.App):
         self.canvas.redraw()
 
 def main():
-    return Tiler()
+    return Tiler("Tiler", "com.johnzhou.tiler")
