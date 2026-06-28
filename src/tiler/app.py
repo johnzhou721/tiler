@@ -2,6 +2,10 @@
 An app that makes printables with multiple copies of text or image.
 """
 
+import os
+# If window is very wide we might be a bit cooked...
+os.environ["QT_IMAGEIO_MAXALLOC"] = "1024"
+
 import toga
 import togax_frost
 import PIL.Image
@@ -76,7 +80,7 @@ class Tiler(toga.App):
         crop_width, crop_height = self.paper_width, self.paper_height
         print(crop_width, crop_height)
         img = center_crop(img, crop_width, crop_height)
-        img.save("/Users/johnzhou/test112233.png")
+        img.save("/home/johnzhou/test112233.png")
 
     @contextmanager
     def sans_redraw(self):
