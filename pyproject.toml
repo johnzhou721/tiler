@@ -27,7 +27,7 @@ test_requires = [
 
 requires = [
     "pillow",
-    "../togax-frost",
+    "togax-frost @ git+https://github.com/johnzhou721/togax-frost.git"
 ]
 
 [tool.briefcase.app.tiler.macOS]
